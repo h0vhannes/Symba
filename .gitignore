@@ -38,3 +38,6 @@
 
 # Vagrant
 .vagrant
+
+# PHPStorm
+.idea
