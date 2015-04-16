@@ -2,7 +2,6 @@ php-latest:
   pkg:
     - installed
     - names:
-      - php5-cli
       - php5-fpm
       - php5-mysql
       - php5-intl
@@ -21,12 +20,23 @@ php-latest:
       - php5-redis
       - php5-sqlite
       - php5-mongo
+      - php5-xdebug
+      - php5-dev
       - php-apc
+      - php-pear
 
 phpconf:
   file.managed:
     - name: /etc/php5/fpm/php.ini
     - source: salt://php/php.ini
+    - template: jinja
+    - makedirs: True
+    - mode: 644
+
+xdebugconf:
+  file.managed:
+    - name: /etc/php5/fpm/conf.d/20-xdebug.ini
+    - source: salt://php/xdebug.ini
     - template: jinja
     - makedirs: True
     - mode: 644

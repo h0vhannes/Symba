@@ -8,6 +8,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "ubuntu/trusty64"
 
   # Network
+  config.vm.network :forwarded_port, guest: 80, host: 8000, auto_correct: true
   config.vm.network "private_network", ip: "192.168.10.10"
 
   # Shared
