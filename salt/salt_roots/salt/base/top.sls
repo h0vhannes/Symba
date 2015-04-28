@@ -5,7 +5,8 @@ local:
     - symfony
     - nginx
     - redis
-#    - mysql.server
+    - website
+    - mysql
 
 dev:
   '*':
