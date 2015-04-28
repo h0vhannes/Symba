@@ -1,23 +1,34 @@
 local:
   '*':
+    - packages
     - php
     - composer
     - symfony
     - nginx
     - redis
-    - website
     - mysql
+    - website
 
 dev:
   '*':
     - git
-    - redis
+    - packages
+    - php
+    - composer
+    - symfony
     - nginx
-    - cron
+    - redis
+    - mysql
+    - website
 
 prod:
   '*':
     - git
-    - redis
+    - packages
+    - php
+    - composer
+    - symfony
     - nginx
-    - cron
+    - redis
+    - mysql
+    - website
