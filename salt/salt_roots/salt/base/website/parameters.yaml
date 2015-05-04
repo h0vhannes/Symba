@@ -1,0 +1,13 @@
+parameters:
+    database_driver: {{ pillar['parameters']['database_driver'] }}
+    database_host: {{ pillar['parameters']['database_host'] }}
+    database_port: {{ pillar['parameters']['database_port'] }}
+    database_name: {{ pillar['parameters']['database_name'] }}
+    database_user: {{ pillar['parameters']['database_user'] }}
+    database_password: {{ pillar['parameters']['database_password'] }}
+    mailer_transport: {{ pillar['parameters']['mailer_transport'] }}
+    mailer_host: {{ pillar['parameters']['mailer_host'] }}
+    mailer_user: {{ pillar['parameters']['mailer_user'] }}
+    mailer_password: {{ pillar['parameters']['mailer_password'] }}
+    locale: {{ pillar['parameters']['locale'] }}
+    secret: {{ pillar['parameters']['secret'] }}

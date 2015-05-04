@@ -1,6 +1,6 @@
 local:
   '*':
-    - packages
+    - git
     - php
     - composer
     - symfony
@@ -12,7 +12,6 @@ local:
 dev:
   '*':
     - git
-    - packages
     - php
     - composer
     - symfony
@@ -24,7 +23,6 @@ dev:
 prod:
   '*':
     - git
-    - packages
     - php
     - composer
     - symfony
