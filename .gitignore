@@ -40,4 +40,4 @@
 .vagrant
 
 # PHPStorm
-.idea
+.idea/
