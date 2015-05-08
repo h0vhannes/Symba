@@ -18,7 +18,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.network "private_network", ip: "192.168.10.10"
 
   # Shared
-  config.vm.synced_folder ".", "/var/www", :nfs => true
+  config.vm.synced_folder ".", "/var/www", :nfs => true, :mount_options => ['nolock,vers=3,udp,noatime']
 
   # Configure virtual host name
   config.vm.hostname = "symba"
