@@ -6,6 +6,7 @@ local:
     - symfony
     - nginx
     - redis
+    - memcached
     - mysql
     - website
 
@@ -17,6 +18,7 @@ dev:
     - symfony
     - nginx
     - redis
+    - memcached
     - mysql
     - website
 
@@ -28,5 +30,6 @@ prod:
     - symfony
     - nginx
     - redis
+    - memcached
     - mysql
     - website
