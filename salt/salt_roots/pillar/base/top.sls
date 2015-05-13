@@ -1,22 +1,11 @@
 local:
   '*':
-    - nginx
-    - mysql
-    - website
-    - parameters
+    - config
 
 dev:
   '*':
-    - git
-    - nginx
-    - mysql
-    - website
-    - parameters
+    - config
 
 prod:
   '*':
-    - git
-    - nginx
-    - mysql
-    - website
-    - parameters
+    - config
