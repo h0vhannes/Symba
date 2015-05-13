@@ -3,7 +3,6 @@ local:
     - git
     - php
     - composer
-    - symfony
     - nginx
     - redis
     - memcached
@@ -15,7 +14,6 @@ dev:
     - git
     - php
     - composer
-    - symfony
     - nginx
     - redis
     - memcached
@@ -27,7 +25,6 @@ prod:
     - git
     - php
     - composer
-    - symfony
     - nginx
     - redis
     - memcached
