@@ -7,7 +7,7 @@ local:
     - redis
     - memcached
     - mysql
-    - website
+    - deployment
 
 dev:
   '*':
@@ -18,7 +18,7 @@ dev:
     - redis
     - memcached
     - mysql
-    - website
+    - deployment
 
 prod:
   '*':
@@ -29,4 +29,4 @@ prod:
     - redis
     - memcached
     - mysql
-    - website
+    - deployment

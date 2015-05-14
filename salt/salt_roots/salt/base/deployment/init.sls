@@ -2,7 +2,7 @@ copy-parameters:
     file:
         - managed
         - name: {{ pillar["deployment"]["parameters_path"] }}
-        - source: salt://website/parameters.yaml
+        - source: salt://deployment/parameters.yaml
         - template: jinja
 
 composer-update:
