@@ -1,7 +1,3 @@
-local:
-  '*':
-    - config
-
 dev:
   '*':
     - config

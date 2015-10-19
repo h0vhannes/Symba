@@ -51,3 +51,15 @@ xdebugconf:
     - template: jinja
     - makedirs: True
     - mode: 644
+
+install-phpunit:
+  cmd.run:
+    - name: sudo wget https://phar.phpunit.de/phpunit.phar && sudo chmod +x phpunit.phar && sudo mv phpunit.phar /usr/local/bin/phpunit
+    - unless: test -f /usr/local/bin/phpunit
+    - cwd: /root/
+
+install-php-cs-fixer:
+  cmd.run:
+    - name: sudo wget http://get.sensiolabs.org/php-cs-fixer.phar -O php-cs-fixer && sudo chmod a+x php-cs-fixer && sudo mv php-cs-fixer /usr/local/bin/php-cs-fixer
+    - unless: test -f /usr/local/bin/php-cs-fixer
+    - cwd: /root/
