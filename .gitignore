@@ -2,6 +2,8 @@
 /app/bootstrap.php.cache
 /app/cache/*
 !app/cache/.gitkeep
+/app/coverage/*
+!app/coverage/.gitkeep
 /app/config/parameters.yml
 /app/logs/*
 !app/logs/.gitkeep

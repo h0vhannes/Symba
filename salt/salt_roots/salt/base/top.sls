@@ -1,7 +1,9 @@
 local:
   '*':
+    - packages
     - php
     - composer
+    - phpunit
     - symfony
     - nginx
     - redis
@@ -10,8 +12,10 @@ local:
 
 dev:
   '*':
+    - packages
     - php
     - composer
+    - phpunit
     - symfony
     - nginx
     - redis
@@ -20,8 +24,10 @@ dev:
 
 prod:
   '*':
+    - packages
     - php
     - composer
+    - phpunit
     - symfony
     - nginx
     - redis
