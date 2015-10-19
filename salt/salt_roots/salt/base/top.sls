@@ -1,32 +1,29 @@
 local:
   '*':
-    - git
     - php
     - composer
+    - symfony
     - nginx
     - redis
-    - memcached
     - mysql
-    - deployment
+    - deploy
 
 dev:
   '*':
-    - git
     - php
     - composer
+    - symfony
     - nginx
     - redis
-    - memcached
     - mysql
-    - deployment
+    - deploy
 
 prod:
   '*':
-    - git
     - php
     - composer
+    - symfony
     - nginx
     - redis
-    - memcached
     - mysql
-    - deployment
+    - deploy

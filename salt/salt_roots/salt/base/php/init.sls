@@ -1,11 +1,10 @@
-php-latest:
+php-modules:
   pkg:
     - installed
     - names:
       - php5-fpm
       - php5-mysql
       - php5-intl
-      - php5-adodb
       - php5-cgi
       - php5-curl
       - php5-gd
@@ -25,10 +24,22 @@ php-latest:
       - php-apc
       - php-pear
 
-phpconf:
+php5_ppa:
+  pkgrepo.managed:
+    - ppa: ondrej/php5-5.6
+
+php5-fpm:
+  pkg.latest:
+    - refresh: True
+    - require:
+      - pkgrepo: php5_ppa
+  service.running:
+      - enable: True
+
+php-ini:
   file.managed:
     - name: /etc/php5/fpm/php.ini
-    - source: salt://php/php.ini
+    - source: salt://php/files/php.ini
     - template: jinja
     - makedirs: True
     - mode: 644
@@ -36,7 +47,7 @@ phpconf:
 xdebugconf:
   file.managed:
     - name: /etc/php5/fpm/conf.d/20-xdebug.ini
-    - source: salt://php/xdebug.ini
+    - source: salt://php/files/xdebug.ini
     - template: jinja
     - makedirs: True
     - mode: 644
