@@ -46,7 +46,7 @@ Setup (Local Machine)
 **After this steps you will have server with all its requirements.**
 
 ### Project Setup
-If you closed your ssh session, ```cd``` to yout project directory and run ```vagrant up```.
+If you closed your ssh session, ```cd``` to yout project directory and run ```vagrant up``` again.
 
 **Symba does not have Symfony application preinstalled.** You must create it in your /var/www directory. But symfony installer will thow an error when you try to install project in 'not empty' directory. The easyest way to do it, is to run these commands.
 
@@ -57,3 +57,24 @@ If you closed your ssh session, ```cd``` to yout project directory and run ```va
 ```mv /var/www/tmp/* /var/www && rm -rf /var/www/tmp```
 
 Here we go! Now you can open <a href="http://symfony-project.dev" target="_blank">http://symfony-project.dev</a> in your browser and if you see nice Symfony welcome screen, it means that setup was successful, congrats!
+
+Setup (Remote Server)
+===
+
+* SSH to your server.
+* Clone your project from repository.
+* Copy salt/pillar/config.sls.dist file to salt/pillar/config.sls. Here you can specify all your configurations that will affect your installation.
+* Copy salt/salt/ngins/files/nginx.conf.dist to salt/salt/ngins/files/nginx.conf. This will be your nginx host configuration file. Change server_name to your actual domain name, ex ```server_name symfony-www.example.com example.com;```
+* Run ```sudo sh salt/scripts/install.sh``` to install Salt Minion.
+* Run ```sudo sh scripts/provision.sh``` to run salt states.
+
+**After this steps you will have server with all its requirements.**
+
+Restart server ```sudo reboot```
+
+Thats it. Now you can access your project via domain name.
+
+Update Server
+===
+
+
