@@ -1,27 +1,19 @@
 # Symfony related
 /app/bootstrap.php.cache
-
 /app/cache/*
 !app/cache/.gitkeep
-
-/app/coverage/*
-!app/coverage/.gitkeep
-
 /app/config/parameters.yml
-
 /app/logs/*
 !app/logs/.gitkeep
-
 /app/phpunit.xml
-
 /web/bundles/
-
-/web/app.php
-/web/app_dev.php
 
 # Composer
 /vendor/
 
+# SaltStack
+/salt/pillar/config.sls
+/salt/salt/nginx/files/nginx.conf
 
 #IDE
 *.idea/*

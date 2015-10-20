@@ -1,7 +1,0 @@
-dev:
-  '*':
-    - config
-
-prod:
-  '*':
-    - config
