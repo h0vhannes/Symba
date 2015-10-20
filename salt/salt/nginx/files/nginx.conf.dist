@@ -1,8 +1,8 @@
 server {
-    server_name sloth.dev;
+    server_name symba.dev;
     root /var/www/web;
 
-    server_name sloth.dev;
+    server_name symba.dev;
     root /var/www/web;
 
     index app.php;
