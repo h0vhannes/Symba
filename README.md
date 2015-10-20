@@ -3,11 +3,6 @@ Symfony-Vagrant Boilerplate
 
 A minimal Symfony boilerplate that uses Vagrant and SaltStack. It has something that will help you do some stuff.
 
-Benefits
-===
-* One development environment for all. It means that you will never hear "It works on my machine".
-* Easy deployment. When you add changes, they can be automaticaly deployed to production or development servers
-
 What will be installed
 ===
 * <a href="http://php.net/ChangeLog-5.php#5.6.14" target="_blank">PHP 5.6</a>
@@ -16,6 +11,7 @@ What will be installed
 * <a href="https://getcomposer.org/" target="_blank">Composer (globally)</a>
 * <a href="https://github.com/symfony/symfony-installer" target="_blank">Symfony installer (globally)</a>
 * <a href="https://phpunit.de/" target="_blank">PHPUnit (globally)</a>
+* <a href="https://github.com/FriendsOfPHP/PHP-CS-Fixer" target="_blank">PHP-CS-Fixer (globally)</a>
 
 Requirements
 ===
