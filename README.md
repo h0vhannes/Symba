@@ -17,10 +17,9 @@ What will be installed
 * <a href="https://github.com/symfony/symfony-installer" target="_blank">Symfony installer (globally)</a>
 * <a href="https://phpunit.de/" target="_blank">PHPUnit (globally)</a>
 
-Important
+Requirements
 ===
-* Symba assumes that you have only **one project** on a **single server**. Of course you can change it as you want, to fit your requirements.
-* Also your server must run on Ubuntu 14.04 LTS
+* Your server must run on Ubuntu 14.04 LTS
 
 Preparations
 ===
@@ -82,3 +81,7 @@ Update Server
 
 Everytime you want to update your project from SVC just run ```sudo sh scripts/update.sh```. It will automaticaly pull your project and run deployment commands. You are free to make changes in this script to extend update functionality.
 
+Important
+===
+* Symba assumes that you have only **one project** on a **single server**. Of course you can change it as you want, to fit your requirements.
+* Do not execute update.sh script on your local machine, id can accidentally revert all your changes. 
