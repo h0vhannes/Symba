@@ -11,7 +11,7 @@ Benefits
 What will be installed
 ===
 * <a href="http://php.net/ChangeLog-5.php#5.6.14" target="_blank">PHP 5.6</a>
-* <a href="https://dev.mysql.com/downloads/mysql/5.5.html" target="_blank">Mysql 5.5 5.6</a>
+* <a href="https://dev.mysql.com/downloads/mysql/5.5.html" target="_blank">Mysql 5.5</a>
 * <a href="http://nginx.org/" target="_blank">Nginx</a>
 * <a href="https://getcomposer.org/" target="_blank">Composer (globally)</a>
 * <a href="https://github.com/symfony/symfony-installer" target="_blank">Symfony installer (globally)</a>
@@ -62,7 +62,10 @@ Setup (Remote Server)
 ===
 
 * SSH to your server.
-* Clone your project from repository.
+* ```cd /var/www```
+* Clone your project from repository ```git clone git@github.com:username/project.git .```.
+* Checkout your working branch ```git checkout master|dev```.
+* Pull ```git pull```
 * Copy salt/pillar/config.sls.dist file to salt/pillar/config.sls. Here you can specify all your configurations that will affect your installation.
 * Copy salt/salt/ngins/files/nginx.conf.dist to salt/salt/ngins/files/nginx.conf. This will be your nginx host configuration file. Change server_name to your actual domain name, ex ```server_name symfony-www.example.com example.com;```
 * Run ```sudo sh salt/scripts/install.sh``` to install Salt Minion.
@@ -77,4 +80,5 @@ Thats it. Now you can access your project via domain name.
 Update Server
 ===
 
+Everytime you want to update your project from SVC just run ```sudo sh scripts/update.sh```. It will automaticaly pull your project and run deployment commands. You are free to make changes in this script to extend update functionality.
 
