@@ -31,8 +31,6 @@ install these requirements and continue
 Setup (Local Machine)
 ===
 
-### Server Setup
-
 * Download <a href="https://github.com/araratpoghosyan/Symba/archive/master.zip" target="_blank">Zip Archive</a> and unzip it.
 * Open Vagrantfile with text editor and change **config.vm.hostname** value (symba) to your project name, ex. **config.vm.hostname = "symfony-project"**.
 * Copy salt/pillar/config.sls.dist file to salt/pillar/config.sls. Here you can specify all your configurations that will affect your installation.
