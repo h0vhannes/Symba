@@ -7,7 +7,7 @@ What will be installed
 ===
 * <a href="http://php.net/ChangeLog-5.php#5.6.14" target="_blank">PHP 5.6</a>
 * <a href="https://dev.mysql.com/downloads/mysql/5.5.html" target="_blank">Mysql 5.5</a>
-* <a href="http://nginx.org/" target="_blank">Nginx</a>
+* <a href="https://httpd.apache.org/" target="_blank">Apache2</a>
 * <a href="https://getcomposer.org/" target="_blank">Composer (globally)</a>
 * <a href="https://github.com/symfony/symfony-installer" target="_blank">Symfony installer (globally)</a>
 * <a href="https://phpunit.de/" target="_blank">PHPUnit (globally)</a>
@@ -29,7 +29,7 @@ Setup (Local Machine)
 * Download <a href="https://github.com/araratpoghosyan/Symba/archive/master.zip" target="_blank">Zip Archive</a> and unzip it.
 * Open Vagrantfile with text editor and change **config.vm.hostname** value (symba) to your project name, ex. **config.vm.hostname = "symfony-project"**.
 * Copy salt/pillar/config.sls.dist file to salt/pillar/config.sls. Here you can specify all your configurations that will affect your installation.
-* Copy salt/salt/ngins/files/nginx.conf.dist to salt/salt/ngins/files/nginx.conf. This will be your nginx host configuration file. Change server_name to your project domain name, ex ```server_name symfony-project.dev;```
+* Copy salt/salt/apache/files/apache.conf.dist to salt/salt/apache/files/apache.conf. This will be your apache host configuration file. Change server_name to your project domain name, ex ```server_name symfony-project.dev;```
 * Edit your hosts file and add this line at the bottom ```192.168.10.10 symfony-project.dev```. If you don't know how to edit hosts file please follow <a href="http://www.howtogeek.com/howto/27350/beginner-geek-how-to-edit-your-hosts-file/" target="_blank">this</a> link.
 * Open **terminal** (on Mac) or **cmd** (on Windows) and change your working directory to unzipped folder.
 * Run ```vagrant up```
@@ -62,7 +62,7 @@ Setup (Remote Server)
 * Checkout your working branch ```git checkout master|dev```.
 * Pull ```git pull```
 * Copy salt/pillar/config.sls.dist file to salt/pillar/config.sls. Here you can specify all your configurations that will affect your installation.
-* Copy salt/salt/ngins/files/nginx.conf.dist to salt/salt/ngins/files/nginx.conf. This will be your nginx host configuration file. Change server_name to your actual domain name, ex ```server_name symfony-www.example.com example.com;```
+* Copy salt/salt/apache/files/apache.conf.dist to salt/salt/apache/files/apache.conf. This will be your apache host configuration file. Change server_name to your actual domain name, ex ```server_name symfony-www.example.com example.com;```
 * Run ```sudo sh salt/scripts/install.sh``` to install Salt Minion.
 * Run ```sudo sh scripts/provision.sh``` to run salt states.
 

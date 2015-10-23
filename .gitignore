@@ -13,7 +13,7 @@
 
 # SaltStack
 /salt/pillar/config.sls
-/salt/salt/nginx/files/nginx.conf
+/salt/salt/apache/files/apache.conf
 
 #IDE
 *.idea/*

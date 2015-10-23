@@ -4,5 +4,5 @@
     - php
     - composer
     - symfony
-    - nginx
+    - apache
     - mysql
