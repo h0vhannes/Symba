@@ -2,17 +2,17 @@
     ServerName domain.tld
     ServerAlias www.domain.tld
 
-    DocumentRoot /var/www/project/web
-    <Directory /var/www/project/web>
+    DocumentRoot /var/wwwweb
+    <Directory /var/www/web>
         AllowOverride All
         Order Allow,Deny
         Allow from All
     </Directory>
 
-    <Directory /var/www/project>
+    <Directory /var/www>
         Options FollowSymlinks
     </Directory>
 
     ErrorLog {{ pillar["apache"]["error_log_file"] }}
-    CustomLog {{ pillar["apache"]["access_log_file"] }}
+    CustomLog {{ pillar["apache"]["access_log_file"] }} combined
 </VirtualHost>

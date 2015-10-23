@@ -15,13 +15,13 @@ apache2:
 
 default-apache:
   file.absent:
-    - name: /etc/apache2/sites-enabled/default
+    - name: /etc/apache2/sites-available/000-default.conf
     - require:
       - pkg: apache2
 
 apacheconf:
   file.managed:
-    - name: /etc/apache2/sites-enabled/default
+    - name: /etc/apache2/sites-available/000-default.conf
     - source: salt://apache/files/apache.conf
     - template: jinja
     - makedirs: True
